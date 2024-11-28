@@ -15,19 +15,19 @@ const app = () =>{
   }
   return(
     <div>
-      <h2 className="bg-yellow-500 text-5xl text-center"> MAHADI FOOD STORE!!! </h2> 
-      <p className="text-3xl text-center">Let's search your favorite fooood!!! </p>
-    <div className="text-center"> 
-    <input type="text" placeholder="search Food Name" onChange={handleInput}/>
-     <button className="bg-green-500 rounded-md px-2"> SEARCH </button>
+      <h2 className="bg-yellow-500 text-5xl text-center py-3 font-semibold"> MAHADI FOOD'S STORE!!! </h2> 
+      <p className="text-3xl text-center mt-3 font-semibold">Let's search your favorite fooood!!! </p>
+    <div className="text-center space-x-5 mt-3"> 
+    <input className="w-[200px] h-[30px] px-3 py-5 border rounded-full" type="text" placeholder="Search food Name" onChange={handleInput}/>
+     <button className="border border-black rounded-md px-4 py-1 hover:bg-green-500 hover:text-black "> Search </button>
     </div>
-     <div className="grid grid-cols-4 gap-4">
+     <div className="grid grid-cols-5 gap-4 mt-3">
       {
        meals.map((meal,index)=> <div className="p-3 shadow" key={meal.idMeal}>
       <img src={ meal.strMealThumb } className=" rounded-xl" alt=""/>
-      <div className="flex items-center flex-item-center justify-between">
-      <h2> {meal.strMeal} </h2>
-      <span className="text-[15px] bg-green-500 text-white rounded-full px-2">
+      <div className="flex items-center flex-item-center justify-between py-3 ">
+      <h2 className="text-[15px] bg-orange-500 rounded-full px-2 py-1 text-white"> {meal.strMeal} </h2>
+      <span className="text-[15px] bg-green-500 text-white rounded-full px-2 py-1 ">
         {meal.strArea}</span>
          </div>
       </div>)
