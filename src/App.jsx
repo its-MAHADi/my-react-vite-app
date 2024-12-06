@@ -14,9 +14,9 @@ const app = () =>{
     setSearch(value)
   }
   return(
-    <div>
-      <h2 className="bg-yellow-500 text-5xl text-center py-3 font-semibold"> MAHADI FOOD'S STORE!!! </h2> 
-      <p className="text-3xl text-center mt-3 font-semibold">Let's search your favorite fooood!!! </p>
+    <div className="bg-[url('/background.png')] bg-cover h-screen">
+      <h2 className=" text-5xl text-center py-3 font-semibold text-yellow-500"> Mahadi Food Store </h2> 
+      <p className="text-3xl text-center mt-3 font-semibold">Let's search your favorite <span className="text-yellow-500">fooood!!!</span> </p>
     <div className="text-center space-x-5 mt-3"> 
     <input className="w-[200px] h-[30px] px-3 py-5 border rounded-full" type="text" placeholder="Search food Name" onChange={handleInput}/>
      <button className="border border-black rounded-md px-4 py-1 hover:bg-green-500 hover:text-black "> Search </button>
